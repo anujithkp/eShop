@@ -1,0 +1,24 @@
+{
+  "annotations": {
+    "changelogDate": "20240119062442"
+  },
+  "applications": "*",
+  "entityTableName": "shipment",
+  "fields": [
+    {
+      "fieldName": "orderID",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "address",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Shipment",
+  "relationships": [],
+  "searchEngine": "no"
+}

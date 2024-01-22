@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity PaymentTable.
+    -->
+    <changeSet id="20240119062542-1" author="jhipster">
+        <createTable tableName="payment_table">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="order_id" type="integer">
+                <constraints nullable="false"
+                foreignKeyName="fk__order_id_payment_table"
+                referencedColumnNames="id"
+                referencedTableName="jhi_order"/>
+            </column>
+            <column name="user_id" type="integer">
+                <constraints nullable="false"
+                foreignKeyName="fk__user_id_payment_table"
+                referencedColumnNames="id"
+                referencedTableName="jhi_user"/>
+            </column>
+            <column name="payment_date" type="date">
+                <constraints nullable="true" />
+            </column>
+            <column name="payment_method" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="transaction_amount" type="double">
+                <constraints nullable="true" />
+            </column>
+            <column name="payment_status" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="billing_address" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20240119062542-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/payment_table.csv"
+                  separator=";"
+                  tableName="payment_table"
+                  usePreparedStatements="true">
+            <column name="id" type="numeric"/>
+            <column name="order_id" type="numeric"/>
+            <column name="user_id" type="numeric"/>
+            <column name="payment_date" type="date"/>
+            <column name="payment_method" type="numeric"/>
+            <column name="transaction_amount" type="numeric"/>
+            <column name="payment_status" type="string"/>
+            <column name="billing_address" type="string"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,28 @@
+{
+  "annotations": {
+    "changelogDate": "20240119062242"
+  },
+  "applications": "*",
+  "entityTableName": "orderlist",
+  "fields": [
+    {
+      "fieldName": "orderId",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "productId",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "quantity",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "subtotal",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Orderlist",
+  "relationships": [],
+  "searchEngine": "no"
+}

@@ -1,0 +1,32 @@
+{
+  "annotations": {
+    "changelogDate": "20240119062142"
+  },
+  "applications": "*",
+  "entityTableName": "jhi_order",
+  "fields": [
+    {
+      "fieldName": "userId",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "productId",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "quantity",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "totalAmount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "orderDate",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "name": "Order",
+  "relationships": [],
+  "searchEngine": "no"
+}

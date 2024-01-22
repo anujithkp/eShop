@@ -1,0 +1,36 @@
+{
+  "annotations": {
+    "changelogDate": "20240119062342"
+  },
+  "applications": "*",
+  "entityTableName": "cart",
+  "fields": [
+    {
+      "fieldName": "userId",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "productId",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "addedToCartDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "priority",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "quantityDesired",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "lastModified",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "name": "Cart",
+  "relationships": [],
+  "searchEngine": "no"
+}

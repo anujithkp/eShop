@@ -1,0 +1,40 @@
+{
+  "annotations": {
+    "changelogDate": "20240119062542"
+  },
+  "applications": "*",
+  "entityTableName": "payment_table",
+  "fields": [
+    {
+      "fieldName": "orderId",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "userId",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "paymentDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "paymentMethod",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "transactionAmount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "paymentStatus",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "billingAddress",
+      "fieldType": "String"
+    }
+  ],
+  "name": "PaymentTable",
+  "relationships": [],
+  "searchEngine": "no"
+}

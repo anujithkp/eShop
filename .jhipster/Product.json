@@ -1,0 +1,28 @@
+{
+  "annotations": {
+    "changelogDate": "20240119062042"
+  },
+  "applications": "*",
+  "entityTableName": "product",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "stock",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Product",
+  "relationships": [],
+  "searchEngine": "no"
+}
